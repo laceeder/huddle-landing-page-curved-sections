@@ -1,0 +1,803 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  /*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *
+   * Customize the background color to match your design.
+   */
+  
+  ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  /*
+   * A better looking default horizontal rule
+   */
+  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  /*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+  
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+  
+  /*
+   * Remove default fieldset styles.
+   */
+  
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*
+   * Allow only vertical resizing of textareas.
+   */
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* ==========================================================================
+     Author's custom styles
+    ========================================================================== */
+
+    /* Mobile and Base Styles */
+
+    html {
+      font-size: 18px;
+      box-sizing: border-box;
+      min-width: 374px;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-size: 1em;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      background: hsl(0, 0%, 100%);
+    }
+
+    header {
+      background-color: hsl(0, 0%, 100%);
+    }
+
+    .header-area {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    header nav img {
+      max-width: 45%;
+    }
+
+    header .try-it {
+      background: hsl(0, 0%, 100%);
+      border: 1px solid hsl(322, 100%, 66%);
+      border-radius: 50px;
+      color: hsl(192, 100%, 9%);
+      padding: 0 18px;
+    }
+
+    header .try-it a {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 0.6667em;
+      color: hsl(322, 100%, 66%);
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+
+    nav .try-it:hover, nav .try-it a:hover {
+      color: hsl(321, 100%, 78%);
+    }
+
+    .hero-section {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    .title-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+      padding: 110px 12.8px 44px 12.8px;
+    }
+
+    .hero-title .main-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.4444em;
+      font-weight: 700;
+      margin: 0 0 24px 0;
+      text-transform: capitalize;
+    }
+
+    .hero-title .main-description {
+      font-size: 0.8167em;
+      font-weight: 600;
+      margin: 0 0 50px 0;
+      line-height: 1.5;
+    }
+
+    .get-started {
+      background: hsl(322, 100%, 66%);
+      border: none;
+      border-radius: 50px;
+      box-shadow: 2px 6px 9px 0 hsl(201, 40%, 92%);
+      padding: 10px 40px;
+      margin: 0 50px 50px 50px;
+    }
+
+    .get-started a {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.6667em;
+      font-weight: 700;
+      color: hsl(0, 0%, 100%);
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+
+    .get-started:hover {
+      background-color: hsl(300, 69%, 71%);
+    }
+
+    .mockup-image img {
+      max-width: 95%;
+      height: auto;
+      margin-top: 41px;
+    }
+
+    main {
+      background-color: hsl(0, 0%, 100%);
+      padding-bottom: 153px;
+    }
+
+    .content-wrapper {
+      background-color: hsl(0, 0%, 100%);
+      display: flex;
+      flex-direction: column;
+      gap: 7.5vh;
+      padding: 60px 0;
+    }
+
+    .stats-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .stats-area .hubble-stats {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin: 50px 0 0 0;
+    }
+
+    .community-icon, .chat-icon {
+      width: 17%;
+      align-items: start;
+    }
+
+    .hubble-stats .community-stats, .hubble-stats .chat-stats {
+      font-size: 3.4444em;
+      margin: 0;
+    }
+
+    .hubble-stats .stats-communities, .hubble-stats .stats-message {
+      font-family: 'Open Sans', sans-serif;
+      opacity: 75%;
+      text-transform: capitalize;
+      text-align: center;
+    }
+
+    .hubble-stats .stats-communities {
+      font-size: 0.8889em;
+      margin: 5px 0 90px 5px;
+    }
+
+    .hubble-stats .stats-messages {
+      font-size: 0.7778em;
+      margin: 5px 30px;
+      width: 50%;
+    }
+
+    .grow-together-card, .flowing-conversations-card, .your-users-card {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 64px;
+      text-align: center;
+      padding: 54.4px 24px 0 24px;
+    }
+
+    .grow-together-card, .your-users-card {
+      background-color: hsl(207, 100%, 98%);
+    }
+
+    .flowing-conversations-card {
+      background-color: hsl(0, 0%, 100%);
+    }
+
+    .grow-top {
+      background: url('../images/bg-section-top-mobile-1.svg');
+      background-size: cover;
+      height: 110px;
+    }
+
+    .grow-bottom {
+      background: url('../images/bg-section-bottom-mobile-1.svg');
+      background-size: cover;
+      height: 51px;
+      margin-bottom: 30px;
+    }
+
+    .users-top {
+      background: url('../images/bg-section-top-mobile-2.svg');
+      background-size: cover;
+      height: 110px;
+    }
+
+    .users-bottom {
+      background: url('../images/bg-section-bottom-mobile-2.svg');
+      background-size: cover;
+      height: 100px;
+    }
+
+    .grow-together-card img, .flowing-conversations-card img, .your-users-card img,
+    .build-community img {
+      max-width: 80%;
+    }
+
+    .card-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1667em;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-transform: capitalize;
+    }
+
+    .card-description {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.7778em;
+      font-weight: 600;
+      color: hsl(192, 100%, 9%);
+    }
+
+    .grow-together-card .card-description {
+      margin: 0 5px 45px 0;
+    }
+
+    .flowing-conversations-card .card-description {
+      margin: 0 5px 75px 5px;
+    }
+
+    .your-users-card .card-description {
+      margin: 0 22px 100px 22px;
+    }
+
+    .build-community {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      padding-top: 30px;
+    }
+
+    .build-community .community-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.4444em;
+      font-weight: 700;
+      color:hsl(192, 100%, 9%);
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    footer {
+      background-color: hsl(192, 100%, 9%);
+      position: absolute;
+      bottom: auto;
+      top: auto;
+      left: auto;
+    }
+
+    .footer-top {
+      background: url('../images/bg-footer-top-mobile.svg');
+      background-size: cover;
+      height: 56px;
+    }
+
+    .footer-wrapper {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    .newsletter-right {
+      color: hsl(0, 0%, 100%);
+      margin-bottom: 120px;
+      padding-top: 70px;
+    }
+
+    .newsletter-right h3 {
+      font-size: 1.1111em;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .newsletter-right .newsletter-description {
+      font-size: 0.8333em;
+      margin: 15px 16px 35px 0;
+    }
+
+    input {
+      width: 344px;
+      height: 46px;
+      border: none;
+      border-radius: 7px;
+      margin: 0 0 15px 0;
+    }
+
+    input:hover {
+      border: hsl(0, 100%, 63%);
+    }
+
+    .subscribe-button {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.8889em;
+      font-weight: 600;
+      background-color: hsl(322, 100%, 66%);
+      color: hsl(0, 0%, 100%);
+      width: 150px;
+      border-radius: 7px;
+      padding: 9px;
+      margin: 0 0 0 199px;
+    }
+
+    .subscribe-button:hover {
+      background-color: hsl(321, 100%, 78%);
+    }
+
+    .logo-white {
+      width: 220px;
+      height: 35px;
+    }
+
+    .footer-content .contact-area-left {
+      margin-bottom: 40px;
+    }
+
+    .footer-content .contact-section {
+      font-size: 0.8333em;
+      color: hsl(0, 0%, 100%);
+    }
+
+    .footer-content .location-info {
+      font-weight: 600;
+      margin: 21px 0 35px 0;
+      line-height: 1.675;
+    }
+    
+    .footer-content .contact-info {
+      margin: 0 0 20px 0;
+    }
+
+    .contact-info img {
+      margin: 0 15px 0 0;
+    }
+
+    .contact-info .email-info, .contact-info .phone-info {
+      font-size: 0.9444em;
+      font-weight: 400;
+    }
+
+    .footer-content .social-media a {
+      width: 20px;
+      color: hsl(0, 0%, 100%);
+      padding: 6.4px 8px;
+      display: inline-block;
+      margin: 0 0 16px 4.8px;
+    }
+
+    .footer-content .social-media a:hover {
+      color: 	hsl(195, 100%, 50%);
+    }
+
+        
+
+
+  /* ==========================================================================
+     Helper classes
+     ========================================================================== */
+  
+  /*
+   * Hide visually and from screen readers
+   */
+  
+   .hidden,
+   [hidden] {
+     display: none !important;
+   }
+   
+   /*
+    * Hide only visually, but have it available for screen readers:
+    * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+    *
+    * 1. For long content, line feeds are not interpreted as spaces and small width
+    *    causes content to wrap 1 word per line:
+    *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+    */
+   
+   .sr-only {
+     border: 0;
+     clip: rect(0, 0, 0, 0);
+     height: 1px;
+     margin: -1px;
+     overflow: hidden;
+     padding: 0;
+     position: absolute;
+     white-space: nowrap;
+     width: 1px;
+     /* 1 */
+   }
+   
+   /*
+    * Extends the .sr-only class to allow the element
+    * to be focusable when navigated to via the keyboard:
+    * https://www.drupal.org/node/897638
+    */
+   
+   .sr-only.focusable:active,
+   .sr-only.focusable:focus {
+     clip: auto;
+     height: auto;
+     margin: 0;
+     overflow: visible;
+     position: static;
+     white-space: inherit;
+     width: auto;
+   }
+   
+   /*
+    * Hide visually and from screen readers, but maintain layout
+    */
+   
+   .invisible {
+     visibility: hidden;
+   }
+   
+   /*
+    * Clearfix: contain floats
+    *
+    * For modern browsers
+    * 1. The space content is one way to avoid an Opera bug when the
+    *    `contenteditable` attribute is included anywhere else in the document.
+    *    Otherwise it causes space to appear at the top and bottom of elements
+    *    that receive the `clearfix` class.
+    * 2. The use of `table` rather than `block` is only necessary if using
+    *    `:before` to contain the top-margins of child elements.
+    */
+   
+   .clearfix::before,
+   .clearfix::after {
+     content: " ";
+     display: table;
+   }
+   
+   .clearfix::after {
+     clear: both;
+   }
+   
+   /* ==========================================================================
+      EXAMPLE Media Queries for Responsive Design.
+      These examples override the primary ('mobile first') styles.
+      Modify as content requires.
+      ========================================================================== */
+   
+   @media only screen and (min-width: 1440px) {
+     /*Desktop styles*/
+
+     header nav {
+      padding: 60px 0;
+     }
+     
+     header nav img {
+      max-width: 70%;
+     }
+
+     .hero-title .main-title {
+      font-size: 1.8889em;
+     }
+
+     .hero-title .main-description {
+      font-size: 0.8333em;
+      margin: 0 408px 35px 408px;
+      line-height: 1.475;
+     }
+
+     .get-started {
+      padding: 18px 40px;
+      margin: 0 450px 35px 467px;
+     }
+
+     .get-started a {
+      font-size: 0.7778em;
+     }
+
+     .mockup-image img {
+      max-width: 80%;
+     }
+
+     .content-wrapper .hubble-stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      align-self: center;
+     }
+
+     .stats-area {
+      margin: 0 0 0 306px;
+     }
+
+     .community-icon {
+      grid-row: 1/1;
+      width: 23%;
+      align-items: start;
+     }
+
+     .hubble-stats .community-stats {
+      font-size: 4.4444em;
+      grid-row: 2/3;
+     }
+
+     .hubble-stats .stats-communities {
+      font-size: 1em;
+      grid-row: 3/4;
+      margin: 5px 0 0 6px;
+      text-align: left;
+     }
+
+     .chat-icon {
+      grid-column: 4/5;
+      width: 23%;
+     }
+
+     .hubble-stats .chat-stats {
+      font-size: 4.4444em;
+      grid-row: 2/3;
+      grid-column: 4/5;
+     }
+
+     .hubble-stats .stats-messages {
+      font-size: 1em;
+      grid-row: 3/4;
+      grid-column: 4/5;
+      width: 100%;
+      margin: 5px 36px;
+    }
+
+    .grow-top {
+      background:url('../images/bg-section-top-desktop-1.svg');
+      background-size: cover;
+      height: 141px;
+    }
+
+    .grow-bottom {
+      background:url('../images/bg-section-bottom-desktop-1.svg');
+      background-size: cover;
+      height: 117px;
+      margin-bottom: 30px;
+    }
+
+    .users-top {
+      background: url('../images/bg-section-top-desktop-2.svg');
+      background-size: cover;
+      height: 110px;
+    }
+
+    .users-bottom {
+      background: url('../images/bg-section-bottom-desktop-2.svg');
+      background-size: cover;
+      height: 118px;
+    }
+
+    .grow-together-card, .flowing-conversations-card, .your-users-card {
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 48px;
+      text-align: start;
+      padding: 40px 25px 40px 80px;
+      column-gap: 80px;
+     }
+
+     .grow-together-card .card-info, .your-users-card .card-info {
+      order: -1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+     }
+
+     .card-title {
+      font-size: 1.5556em;
+     }
+
+     .grow-together-card .card-description, .flowing-conversations-card .card-description,
+     .your-users-card .card-description {
+      font-size: 0.7778em;
+     }
+
+     .grow-together-card .card-title {
+      margin-left: 20px;
+     }
+
+     .grow-together-card .card-description {
+      margin: 0 121px 35px 20px;
+     }
+
+     .grow-together-card .card-image, .your-users-card .card-image {
+      text-align: end;
+      max-width: 92%;
+     }
+
+     .flowing-conversations-card .card-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 20px;
+     }
+
+     .flowing-conversations-card .card-image {
+      text-align: start;
+     }
+
+     .flowing-conversations-card .card-title {
+      margin: 0 34px 15px 85px;
+     }
+
+     .flowing-conversations-card .card-description {
+      margin: 0 48px 35px 85px;
+     }
+
+     .your-users-card .card-info {
+      margin-top: 20px;
+     }
+
+     .your-users-card .card-title {
+      margin: 0 0 15px 22px;
+     }
+
+     .your-users-card .card-description {
+      margin: 0 117px 35px 22px;
+     }
+
+     .build-community .community-title {
+      font-size: 1.6667em;
+     }
+
+     .get-started {
+      padding: 18px 95px;
+     }
+
+     .get-started a {
+      font-size: 0.7778em;
+     }
+
+     .footer-top {
+      background: url('../images/bg-footer-top-desktop.svg');
+      background-size: cover;
+      height: 151px;
+     }
+
+     .footer-content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 96px 0 32px 0;
+     }
+
+     .footer-content .newsletter-right {
+      grid-row: 1/2;
+      grid-column: 3/4;
+      margin: 0;
+      padding: 0;
+     }
+
+     .newsletter-right h3 {
+      font-size: 1em;
+     }
+
+     .newsletter-right .newsletter-description {
+      font-size: 0.6667em;
+      margin: 15px 138px 35px 0;
+     }
+
+     input {
+      width: 230px;
+      height: 40px;
+      margin: auto;
+     }
+
+     .subscribe-button {
+      font-size: 0.7222em;
+      width: 135px;
+      margin: 0 0 0 29px;
+     }
+
+     .logo-white {
+      width: 164px;
+      height: 28px;
+     }
+
+     .footer-content .contact-area-left {
+      grid-row: 1/2;
+      grid-column: 1/2;
+     }
+
+     .footer-content .contact-section {
+      font-size: 0.6667em;
+     }
+
+     .footer-content .location-info {
+      margin: 21px 136px 20px 0;
+     }
+
+     .footer-content .social-media {
+      text-align: left;
+      padding-top: 37px;
+     }
+
+     .footer-content .social-media a {
+      width: 10px;
+      padding: 0 15px 0 0;
+      display: inline;
+      text-decoration: none;
+     }
+
+   }
